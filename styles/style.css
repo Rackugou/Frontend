@@ -5,7 +5,20 @@
   box-sizing:border-box;  
 }
 
+@font-face {
+	font-family: heading;
+	src: url(/fonts/fontawesome-webfont.woff2);
+}
 
+@font-face {
+	font-family: bold;
+	src: url(/fonts/bold);
+}
+
+@font-face {
+	font-family: normal-text;
+	src: url(/fonts/normal-text);
+}
 
 
 
@@ -28,4 +41,19 @@
 /****************/
 
 /* jouw code */
+h1{
+	font-family: 'bold';
+}
 
+video{
+	height: 100%;
+	width: 100%;
+}
+
+p{
+	font-family: 'normal-text';
+}
+
+#twee{
+	font-family: 'bold';
+}

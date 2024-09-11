@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://ast-science.com/
+  https://www.microsoft.com/nl-nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepage
-  <img src="readme-images/homepage-asts.png" width="375px" alt="homepagina">
+  <img src="readme-images/homepage.png" width="375px" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Spacemobile network 
-  <img src="readme-images/spacemobile-network.png" width="375px" alt="Spacemobile network pagina">
+  Windows
+  <img src="readme-images/windows.png" width="375px" alt="Spacemobile network pagina">
  
 </details>
 
@@ -57,7 +57,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-
+ - De site heeft meerdere HTML errors
+ -Er worden div's gebruikt woord UL zouden moeten zijn
+ -De website heeft geen complexe images
+ -Banner autoplayed images
+ -Geen video's
+ -Geen audio
+ -Sommige links zijn opgemaakt als button
+ -links naar nieuwe tabs zijn hetzelfde opgemaakt als normale links
 </details>
 
 
@@ -68,10 +75,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/Frame1.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/Frame2.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
