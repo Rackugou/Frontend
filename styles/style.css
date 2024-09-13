@@ -3,37 +3,26 @@
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
 }
-
-@font-face {
-	font-family: heading;
-	src: url(/fonts/fontawesome-webfont.woff2);
-}
-
-@font-face {
-	font-family: bold;
-	src: url(/fonts/bold);
-}
-
-@font-face {
-	font-family: normal-text;
-	src: url(/fonts/normal-text);
-}
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-}
+	--color-text:#000; 
+	--color-footer-text:#616161;
+	--color-menu-text:#262626;
+	--color-background:#FFF;
+	--color-footer-background:#f2f2f2;
+	--color-menu-background:#e6e6e6;
 
-
-
+	/* plaatsen in homepage.css bestand */
+	--color-accent-bg-green:#9BF00B;
+	--color-accent-bg-yellow:#ffb900;
+	--color-button:#0067B8;
+}	
 
 
 /****************/
@@ -41,19 +30,70 @@
 /****************/
 
 /* jouw code */
-h1{
-	font-family: 'bold';
+body {
+	font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5;
 }
 
-video{
-	height: 100%;
-	width: 100%;
+header {
+    display: flex;
 }
 
-p{
-	font-family: 'normal-text';
+/* logo */
+header > a {
+	margin:0 auto;
 }
 
-#twee{
-	font-family: 'bold';
+header > a img:first-of-type{
+	width: 6.75em;
+}
+
+/* menu button */
+header > button:nth-of-type(1) {
+	order:-20;
+}
+
+/* zoek button */
+header > button:nth-of-type(2) {
+	order:-10;			
+}
+
+/* hoofdmenu */
+header nav:first-of-type{ 
+    display: none;
+}
+
+header nav.toonMenu{
+	display: block;
+}
+
+/* hoofdmenu */
+header nav:first-of-type ul{ 
+	list-style: none;
+	position: absolute;
+	inset: 0;
+	top: 2em;
+}
+
+header nav:first-of-type ul li{ 
+	background-color: var(--color-menu-background);
+	border-bottom: .1em solid#616161;
+	padding: 2em;
+}
+
+header nav:first-of-type ul li a{ 
+	text-decoration: none;
+	color: var(--color-menu-text);
+}
+
+/* service menu */
+header nav:last-of-type {
+
+}
+
+header nav:last-of-type ul {
+	display:flex;
+	gap: 1em;
 }
