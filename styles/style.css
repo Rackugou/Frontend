@@ -93,6 +93,10 @@ header nav:last-of-type {
 
 }
 
+header nav:last-of-type ul li{
+	list-style: none;
+}
+
 header nav:last-of-type ul {
 	display:flex;
 	gap: 1em;
