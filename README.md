@@ -96,7 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-  
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -112,11 +112,13 @@ Bespreken: Mijn HTML, mijn navigatie en header welke soort foto ik moet gebruike
 -Koen
 Bespreken: Mijn HTML, mijn navigatie en structuur van CSS
 
+van de rest heb ik niks te horen gekregen
+
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - punt 1 Ik heb gevraagd hoe ik mijn a tags de volledige breedte van de parent kon geven in het hamburgermenu en dit moest door display block en padding
+  - punt 2 verder heb ik niks kunnen vragen naast het fixen van mijn github
   - nog een punt
   - ...
 

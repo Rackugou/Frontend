@@ -37,8 +37,18 @@ body {
 	line-height: 1.5;
 }
 
+/* button style reset */
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
 header {
     display: flex;
+	align-items: center;
+	height: 3.3125em;
 }
 
 /* logo */
@@ -50,6 +60,11 @@ header > a img:first-of-type{
 	width: 6.75em;
 }
 
+header > button{
+	height: 3em;
+	width: 3em;
+}
+
 /* menu button */
 header > button:nth-of-type(1) {
 	order:-20;
@@ -57,7 +72,7 @@ header > button:nth-of-type(1) {
 
 /* zoek button */
 header > button:nth-of-type(2) {
-	order:-10;			
+	order:-10;	
 }
 
 /* hoofdmenu */
@@ -71,21 +86,22 @@ header nav.toonMenu{
 
 /* hoofdmenu */
 header nav:first-of-type ul{ 
-	list-style: none;
+	list-style-type: none;
 	position: absolute;
 	inset: 0;
-	top: 2em;
+	top: 3em;
 }
 
 header nav:first-of-type ul li{ 
 	background-color: var(--color-menu-background);
 	border-bottom: .1em solid#616161;
-	padding: 2em;
 }
 
 header nav:first-of-type ul li a{ 
 	text-decoration: none;
 	color: var(--color-menu-text);
+	display: block;
+	padding: 2em;
 }
 
 /* service menu */
@@ -93,11 +109,19 @@ header nav:last-of-type {
 
 }
 
-header nav:last-of-type ul li{
-	list-style: none;
+header nav:last-of-type ul{
+	display:flex;
+	align-items: center;
 }
 
-header nav:last-of-type ul {
-	display:flex;
-	gap: 1em;
+header nav:last-of-type ul li{
+	list-style-type: none;
+}
+
+header nav:last-of-type ul li a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3em;
+	width: 3em;
 }
