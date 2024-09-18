@@ -1,8 +1,23 @@
-
-
-main section:first-of-type{
-    display: grid;
+:root{
+    --color-accent-bg-green:#9BF00B;
+	--color-accent-bg-yellow:#ffb900;
+	--color-button:#0067B8;
 }
+
+body, html {
+    overflow-x: hidden;
+}
+
+main > a:first-of-type{
+    display: block;
+    background-color: var(--color-accent-bg-green);
+    color: var(--color-text);
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 1.5em 1em 1.5em;
+    font-weight: 500;
+}
+
 
 main section:first-of-type img{
     width: 100%;
@@ -10,5 +25,87 @@ main section:first-of-type img{
 
 h1{
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+main > section:first-of-type {
+
+}
+
+main > section:first-of-type ul{
+    display: flex;
+}
+
+main > section:first-of-type ul li{
+    min-width: 100%;
+}
+
+/* eerste card */
+main > section:first-of-type ul li:nth-child(1){
+    display: grid;
+    box-shadow: 2px 4px 4px 0 rgba(0,0,0,.13);
+}
+
+main > section:first-of-type ul li:nth-child(1) article{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+main > section:first-of-type ul li:nth-child(1) p:first-of-type{
+    margin: .3em 0 1.5em 0;
+}
+
+main > section:first-of-type ul li:nth-child(1) p:last-of-type{
+    order: -10;
+    display: block;
+    background-color: var(--color-accent-bg-yellow);
+    padding: .2em .5em;
+    width: fit-content;
+    font-weight: 500;
+}
+
+main > section:first-of-type ul li:nth-child(1) a{
+    text-decoration: none;
+    display: block;
+    background-color: var(--color-button);
+    color: #fff;
+    width: fit-content;
+    padding: .625em .75em;
+    font-weight: 500;
+}
+
+main > section:first-of-type ul li:nth-child(1) img{
+    order:-20;
+}
+
+section:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top:1em ;
+}
+
+section:nth-last-of-type(3) img{
+    width: 2.2em;
+    order: -1;
+}
+
+section:nth-of-type(3) ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+section:nth-last-of-type(3) ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-last-of-type(3) ul li a{
+    color: var(--color-button);
 }

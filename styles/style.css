@@ -17,11 +17,6 @@
 	--color-background:#FFF;
 	--color-footer-background:#f2f2f2;
 	--color-menu-background:#e6e6e6;
-
-	/* plaatsen in homepage.css bestand */
-	--color-accent-bg-green:#9BF00B;
-	--color-accent-bg-yellow:#ffb900;
-	--color-button:#0067B8;
 }	
 
 
@@ -94,21 +89,17 @@ header nav:first-of-type ul{
 
 header nav:first-of-type ul li{ 
 	background-color: var(--color-menu-background);
-	border-bottom: .1em solid#616161;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 header nav:first-of-type ul li a{ 
 	text-decoration: none;
 	color: var(--color-menu-text);
 	display: block;
-	padding: 2em;
+	padding: 1em;
 }
 
 /* service menu */
-header nav:last-of-type {
-
-}
-
 header nav:last-of-type ul{
 	display:flex;
 	align-items: center;
