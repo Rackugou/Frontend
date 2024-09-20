@@ -9,15 +9,19 @@ body, html {
 }
 
 main > a:first-of-type{
-    display: block;
+    display: flex;
+    align-items: center;
     background-color: var(--color-accent-bg-green);
     color: var(--color-text);
     text-decoration: none;
-    text-align: center;
     padding: 1em 1.5em 1em 1.5em;
     font-weight: 500;
+    justify-content: center;
 }
 
+main > a:first-of-type::after{
+    content: url("../images/arrow-right.png"); 
+}
 
 main section:first-of-type img{
     width: 100%;
@@ -28,35 +32,33 @@ h1{
     font-weight: 500;
 }
 
-main > section:first-of-type {
-
+h2{
+    font-size: 1.3125em;
 }
 
 main > section:first-of-type ul{
     display: flex;
 }
 
-main > section:first-of-type ul li{
-    min-width: 100%;
-}
-
 /* eerste card */
-main > section:first-of-type ul li:nth-child(1){
+main > section:first-of-type ul li{
     display: grid;
     box-shadow: 2px 4px 4px 0 rgba(0,0,0,.13);
+    min-width: 100%;
+    transition: 1s;
 }
 
-main > section:first-of-type ul li:nth-child(1) article{
+main > section:first-of-type ul li article{
     padding: 1em;
     display: flex;
     flex-direction: column;
 }
 
-main > section:first-of-type ul li:nth-child(1) p:first-of-type{
+main > section:first-of-type ul li p:first-of-type{
     margin: .3em 0 1.5em 0;
 }
 
-main > section:first-of-type ul li:nth-child(1) p:last-of-type{
+main > section:first-of-type ul li p:last-of-type{
     order: -10;
     display: block;
     background-color: var(--color-accent-bg-yellow);
@@ -65,7 +67,7 @@ main > section:first-of-type ul li:nth-child(1) p:last-of-type{
     font-weight: 500;
 }
 
-main > section:first-of-type ul li:nth-child(1) a{
+main > section:first-of-type ul li a{
     text-decoration: none;
     display: block;
     background-color: var(--color-button);
@@ -75,11 +77,25 @@ main > section:first-of-type ul li:nth-child(1) a{
     font-weight: 500;
 }
 
-main > section:first-of-type ul li:nth-child(1) img{
+main > section:first-of-type ul li img{
     order:-20;
 }
 
-section:nth-of-type(2) {
+main > section:first-of-type ul li:nth-of-type(2) h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.naarLinks{
+    translate: -100%;
+}
+
+.naarRechts{
+    translate: 100%;
+}
+
+/* buttons voor carrousel */
+main section:nth-of-type(2) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,12 +103,12 @@ section:nth-of-type(2) {
     margin-top:1em ;
 }
 
-section:nth-last-of-type(3) img{
+main section:nth-of-type(3) img{
     width: 2.2em;
     order: -1;
 }
 
-section:nth-of-type(3) ul{
+main section:nth-of-type(3) ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -100,12 +116,82 @@ section:nth-of-type(3) ul{
     margin-top: 2em;
 }
 
-section:nth-last-of-type(3) ul li{
+main section:nth-of-type(3) ul li{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section:nth-last-of-type(3) ul li a{
+main section:nth-of-type(3) ul li a{
     color: var(--color-button);
+}
+
+main section:nth-of-type(4){
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) )
+}
+
+main section:nth-of-type(4) article{
+    box-shadow: 0 .1875em .4375em 0 rgba(0, 0, 0, .13), 0 .0625em .125em 0 rgba(0, 0, 0, .11);
+    display: grid;
+    grid-template-columns: 1.5em 1fr 1fr 1.5em;
+    grid-template-rows: 1fr 1em max-content max-content max-content max-content 1em;
+    margin: 1em;
+    gap: .5em;
+}
+
+main section:nth-of-type(4) article img{
+    grid-row-start: 1;
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+main section:nth-of-type(4) article h2{
+    grid-column: 2 / 4;
+    grid-row-start: 3;
+}
+
+main section:nth-of-type(4) article p{
+    grid-column: 2 / 4;
+    grid-row-start: 4;
+}
+
+main section:nth-of-type(4) article a{
+    grid-column: 2 / 4;
+
+}
+
+main section:nth-of-type(4) article a:first-of-type{
+    text-decoration: none;
+    display: block;
+    background-color: var(--color-button);
+    color: #fff;
+    width: fit-content;
+    height: 2.75em;
+    padding: .625em .75em;
+    font-weight: 500;
+    grid-row-start: 5;    
+}
+
+main section:nth-of-type(4) article a:nth-of-type(2){
+    color: var(--color-button);
+    display: flex;
+    font-weight: 500;
+    text-decoration: none;
+    align-self: center;
+    grid-row-start: 6;
+    white-space: nowrap;
+    align-items: center;
+}
+
+main section:nth-of-type(4) article a:nth-of-type(2)::after{
+    content: url("../images/arrow-right.png");
+    filter: invert(25%) sepia(87%) saturate(1688%) hue-rotate(188deg) brightness(94%) contrast(101%);
+}
+
+@media (min-width: 450px) {
+    main section:nth-of-type(4) article:first-of-type  a:last-of-type{
+        grid-column: 3;
+        grid-row-start: 5;
+    }
 }

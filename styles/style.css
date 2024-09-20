@@ -16,7 +16,7 @@
 	--color-menu-text:#262626;
 	--color-background:#FFF;
 	--color-footer-background:#f2f2f2;
-	--color-menu-background:#e6e6e6;
+	--color-menu-background:#e6e6e6;	
 }	
 
 
@@ -85,6 +85,7 @@ header nav:first-of-type ul{
 	position: absolute;
 	inset: 0;
 	top: 3em;
+	z-index: 1;
 }
 
 header nav:first-of-type ul li{ 
@@ -115,4 +116,38 @@ header nav:last-of-type ul li a{
 	align-items: center;
 	height: 3em;
 	width: 3em;
+}
+
+footer {
+	background-color: var(--color-footer-background);
+}
+
+footer{
+	display: flex;
+	flex-direction: column;
+	padding-left: 2em;
+	gap: 1em;
+}
+
+footer section{
+}
+
+footer h4{
+	font-size: 0.9375em;
+	color: var(--color-footer-text);
+	font-weight: 700;
+}
+
+footer ul{
+	list-style-type: none;
+}
+
+footer a{
+	text-decoration: none;
+	color: var(--color-footer-text);
+	font-size: 0.6875em;
+}
+
+footer section:last-of-type ul{
+	display: flex;
 }
