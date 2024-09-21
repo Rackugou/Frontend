@@ -25,6 +25,16 @@
 /****************/
 
 /* jouw code */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}  
+
 body {
 	font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 1em;
@@ -90,7 +100,7 @@ header nav:first-of-type ul{
 
 header nav:first-of-type ul li{ 
 	background-color: var(--color-menu-background);
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 1px solid #d8d7d7;
 }
 
 header nav:first-of-type ul li a{ 
@@ -122,24 +132,24 @@ footer {
 	background-color: var(--color-footer-background);
 }
 
-footer{
+footer > nav{
 	display: flex;
 	flex-direction: column;
-	padding-left: 2em;
-	gap: 1em;
+	padding: 2em;
+	gap: 2.5em;
 }
 
-footer section{
-}
-
-footer h4{
+footer h2{
 	font-size: 0.9375em;
 	color: var(--color-footer-text);
 	font-weight: 700;
 }
 
-footer ul{
+footer > nav ul{
 	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
 }
 
 footer a{
@@ -148,6 +158,42 @@ footer a{
 	font-size: 0.6875em;
 }
 
-footer section:last-of-type ul{
+footer > section:last-of-type{
 	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+footer > section:last-of-type > a{
+	display: flex;
+	gap: .5em;
+}
+
+footer > section:last-of-type nav ul{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style-type: none;
+	column-gap: 1em;
+}	
+
+footer > section:last-of-type nav ul li{
+	align-content: center;
+}
+
+footer > section{
+	padding: 0em 2em 2em 2em;
+}
+
+footer > section nav ul li:last-of-type{
+	font-size: 0.6875em;
+	color: var(--color-footer-text);
+}
+
+footer > section > a:nth-of-type(1)::before{
+	content: url("../images/taal-keuze.png");
+}
+
+footer > section > a:nth-of-type(2)::before{
+	content: url("../images/privacy-setting.png");
 }

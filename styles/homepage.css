@@ -8,7 +8,7 @@ body, html {
     overflow-x: hidden;
 }
 
-main > a:first-of-type{
+main p a:first-of-type{
     display: flex;
     align-items: center;
     background-color: var(--color-accent-bg-green);
@@ -19,25 +19,29 @@ main > a:first-of-type{
     justify-content: center;
 }
 
-main > a:first-of-type::after{
+main > p a:first-of-type::after{
     content: url("../images/arrow-right.png"); 
 }
 
 main section:first-of-type img{
     width: 100%;
+}   
+
+/* buttons carrousel */
+main > section:first-of-type{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
 }
 
-h1{
-    font-size: 1.5em;
-    font-weight: 500;
+main > section:first-of-type > img{
+    width: 10px;
 }
-
-h2{
-    font-size: 1.3125em;
-}
-
 main > section:first-of-type ul{
     display: flex;
+    width: 100%;
 }
 
 /* eerste card */
@@ -48,7 +52,7 @@ main > section:first-of-type ul li{
     transition: 1s;
 }
 
-main > section:first-of-type ul li article{
+main > section:first-of-type ul li div{
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -60,7 +64,6 @@ main > section:first-of-type ul li p:first-of-type{
 
 main > section:first-of-type ul li p:last-of-type{
     order: -10;
-    display: block;
     background-color: var(--color-accent-bg-yellow);
     padding: .2em .5em;
     width: fit-content;
@@ -81,7 +84,7 @@ main > section:first-of-type ul li img{
     order:-20;
 }
 
-main > section:first-of-type ul li:nth-of-type(2) h2{
+main > section:first-of-type ul li h3{
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -94,21 +97,12 @@ main > section:first-of-type ul li:nth-of-type(2) h2{
     translate: 100%;
 }
 
-/* buttons voor carrousel */
-main section:nth-of-type(2) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5em;
-    margin-top:1em ;
-}
-
-main section:nth-of-type(3) img{
+main nav:nth-of-type(1) img{
     width: 2.2em;
     order: -1;
 }
 
-main section:nth-of-type(3) ul{
+main nav:nth-of-type(1) ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -116,82 +110,134 @@ main section:nth-of-type(3) ul{
     margin-top: 2em;
 }
 
-main section:nth-of-type(3) ul li{
+main nav:nth-of-type(1) ul li{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main section:nth-of-type(3) ul li a{
+main nav:nth-of-type(1) ul li a{
     color: var(--color-button);
 }
 
-main section:nth-of-type(4){
+/* cards */
+main :is(section:nth-of-type(2), section:nth-of-type(3)){
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) )
+    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) );
 }
 
-main section:nth-of-type(4) article{
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article{
     box-shadow: 0 .1875em .4375em 0 rgba(0, 0, 0, .13), 0 .0625em .125em 0 rgba(0, 0, 0, .11);
-    display: grid;
-    grid-template-columns: 1.5em 1fr 1fr 1.5em;
-    grid-template-rows: 1fr 1em max-content max-content max-content max-content 1em;
+    display: flex;
+    flex-direction: column;
     margin: 1em;
     gap: .5em;
 }
 
-main section:nth-of-type(4) article img{
-    grid-row-start: 1;
-    grid-column: 1 / -1;
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article div{
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em 1em;
+}
+
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article div h3{
+    font-size: 1.3125em;
+    font-weight: 550;
+    flex-basis: 100%;
+}
+
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article img{
     width: 100%;
+    order: -10;
 }
 
-main section:nth-of-type(4) article h2{
-    grid-column: 2 / 4;
-    grid-row-start: 3;
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article p:nth-of-type(2){
+    order: -10;
+    background-color: var(--color-accent-bg-yellow);
+    padding: .2em .5em;
+    width: fit-content;
+    font-weight: 500;
 }
 
-main section:nth-of-type(4) article p{
-    grid-column: 2 / 4;
-    grid-row-start: 4;
-}
-
-main section:nth-of-type(4) article a{
-    grid-column: 2 / 4;
-
-}
-
-main section:nth-of-type(4) article a:first-of-type{
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article a:first-of-type{
     text-decoration: none;
     display: block;
     background-color: var(--color-button);
     color: #fff;
     width: fit-content;
-    height: 2.75em;
+    height: fit-content;
     padding: .625em .75em;
     font-weight: 500;
-    grid-row-start: 5;    
 }
 
-main section:nth-of-type(4) article a:nth-of-type(2){
+main section:nth-of-type(2) article a:nth-of-type(2){
     color: var(--color-button);
     display: flex;
     font-weight: 500;
     text-decoration: none;
     align-self: center;
-    grid-row-start: 6;
     white-space: nowrap;
     align-items: center;
 }
 
-main section:nth-of-type(4) article a:nth-of-type(2)::after{
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article a:nth-of-type(2)::after{
     content: url("../images/arrow-right.png");
     filter: invert(25%) sepia(87%) saturate(1688%) hue-rotate(188deg) brightness(94%) contrast(101%);
 }
 
-@media (min-width: 450px) {
-    main section:nth-of-type(4) article:first-of-type  a:last-of-type{
-        grid-column: 3;
-        grid-row-start: 5;
-    }
+/* tweede cards */
+main section:nth-of-type(3){
+    margin-top: 2em;
+    position: relative;
+}
+
+main section:nth-of-type(3) h2{
+    font-weight: 500;
+    position: absolute;
+    left: .75em;
+    top: -1em;
+}
+
+main section:nth-of-type(3) article a:nth-of-type(2){
+    color: var(--color-button);
+    display: flex;
+    font-weight: 500;
+    text-decoration: none;
+    align-self: center;
+    align-items: center;
+}
+main section:nth-of-type(3) article:nth-of-type(2) div{
+    height: 100%;
+    justify-content: flex-start;
+}
+
+main section:nth-of-type(3) article:nth-of-type(2) div h3{
+    height: fit-content;
+    
+    
+}
+
+main section:nth-of-type(3) article:nth-of-type(2) div p{
+
+    height: fit-content;
+}
+
+main section:nth-of-type(3) article:nth-of-type(2) a{
+    align-self: flex-end;
+}
+
+main > a{
+    margin: 3em 1em 3em auto;
+    display: block;
+    width: fit-content;
+    padding: 1em;
+    box-shadow: 0 .125em .25em 0 rgba(0, 0, 0, .13), 0 0 .0625em 0 rgba(0, 0, 0, .11);;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+main > a::before{
+    content: url("../images/arrow-up.png");
+    margin-right: 1em;
 }

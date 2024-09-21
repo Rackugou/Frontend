@@ -5,10 +5,10 @@ let menuContent = document.querySelector("header > button:nth-of-type(1) img");
 
 let card1 = document.querySelector("main > section:first-of-type ul li:nth-child(1)");
 let card2 = document.querySelector("main > section:first-of-type ul li:nth-child(2)");
-let buttonLinks = document.querySelector("main section:nth-of-type(2) button:nth-of-type(2)");
-let buttonRechts = document.querySelector("main section:nth-of-type(2) button:nth-of-type(3)");
-let bal1 = document.querySelector("main section:nth-of-type(2) > img:nth-of-type(1)");
-let bal2 = document.querySelector("main section:nth-of-type(2) > img:nth-of-type(2)");
+let buttonLinks = document.querySelector("main section:nth-of-type(1) > button:nth-of-type(2)");
+let buttonRechts = document.querySelector("main section:nth-of-type(1) > button:nth-of-type(3)");
+let bal1 = document.querySelector("main section:nth-of-type(1) > img:nth-of-type(1)");
+let bal2 = document.querySelector("main section:nth-of-type(1) > img:nth-of-type(2)");
 
 menuButton.onclick = () => {
     menu.classList.toggle("toonMenu");
