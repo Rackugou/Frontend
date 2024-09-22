@@ -111,6 +111,10 @@ header nav:first-of-type ul li a{
 }
 
 /* service menu */
+header nav:last-of-type{
+	order: 10;
+}
+
 header nav:last-of-type ul{
 	display:flex;
 	align-items: center;
@@ -196,4 +200,113 @@ footer > section > a:nth-of-type(1)::before{
 
 footer > section > a:nth-of-type(2)::before{
 	content: url("../images/privacy-setting.png");
+}
+
+*:focus{
+	outline: dashed #000;
+	outline-offset: 4px;
+}
+
+header a:not(:has(img)):focus{
+	outline: dashed #000;
+	outline-offset: 4px;
+	text-decoration: underline !important;
+	text-decoration-thickness: 2px !important; 
+}
+
+header a:not(:has(img)):hover{
+	text-decoration: underline !important;
+	text-decoration-thickness: 2px !important; 
+}
+
+
+
+/* nav responsiveness */
+@media (min-width: 870px){
+	header{
+		padding: 0 3em 0 3em;
+	}
+
+	header > a{
+		order: -50;
+		margin: 0 2em 0 0;
+	}
+
+	header > button:nth-of-type(1){
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	header > button:nth-of-type(2){
+		order: 5;
+		margin-left: auto;
+	}
+
+	header nav:first-of-type{
+		display: block;
+	}
+
+	header nav:first-of-type ul{ 
+		position: static;
+		display: flex;
+		flex-wrap: wrap;
+		z-index: 0;
+		width: auto;
+		overflow: hidden;
+		height: 3em;
+		width: 40vw;
+		gap: 1em;
+	}
+
+	header nav:first-of-type ul li{ 
+		background-color: transparent;
+		border-bottom: none;
+		height: 3em	;
+		display: flex;
+		align-items: center;
+	}
+
+	header nav:first-of-type ul li a{
+		padding: 0;
+		white-space: nowrap;
+		align-items: center;
+		font-size: 0.8125em;
+	}	
+}
+
+/* footer responsiveness */
+@media (min-width: 540px){
+	footer > nav{
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	footer > nav section{
+		width: 23vw;
+	}
+}
+
+@media (min-width: 1080px){
+	footer > nav{
+		flex-wrap: nowrap;
+	}
+
+	footer > nav section{
+		width: fit-content;
+	}
+
+	footer > section{
+		flex-direction: row !important;
+		flex-wrap: wrap;
+	}
+
+	footer > section nav{
+		width: 100%;
+	}
 }
