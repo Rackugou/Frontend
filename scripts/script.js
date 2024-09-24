@@ -22,11 +22,16 @@ menuButton.onclick = () => {
 buttonLinks.onclick = () => {
         card1.classList.toggle("naarLinks");
         card2.classList.toggle("naarLinks");
-
+        
+        
         if (card1.classList.contains("naarLinks")){
                 bal1.src = "./images/inactive_ball.png";
                 bal2.src = "./images/active_ball.png";
+                card2.removeAttribute("inert")
+                card1.setAttribute("inert", true)
         } else{
+                card1.removeAttribute("inert")
+                card2.setAttribute("inert", true)
                 bal1.src = "./images/active_ball.png";
                 bal2.src = "./images/inactive_ball.png";
         }
@@ -39,7 +44,11 @@ buttonRechts.onclick = () => {
         if (card1.classList.contains("naarLinks")){
                 bal1.src = "./images/inactive_ball.png";
                 bal2.src = "./images/active_ball.png";
+                card2.removeAttribute("inert")
+                card1.setAttribute("inert", true)
         } else{
+                card1.removeAttribute("inert")
+                card2.setAttribute("inert", true)
                 bal1.src = "./images/active_ball.png";
                 bal2.src = "./images/inactive_ball.png";
         }

@@ -135,7 +135,8 @@ van de rest heb ik niks te horen gekregen
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  
+  Het maken van het hamburger menu is goed gelukt en ik heb mijn banner cards helemaal werkend gekregen inclusief de carrousel functie met javascript. Ik loop nu een beetje tegen de rest van de cards aan omdat ik dit met grid wou doen.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -145,14 +146,15 @@ van de rest heb ik niks te horen gekregen
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
+  Vragen over de grid cards en over hoe ik mijn footer goed krijg en html checken
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - punt 1 De cards mogen met een divje en ik hoef geen grid te gebruiken
+  - punt 2 het footer probleem is opgelost nadat er verteld was dat a elementen inline zijn en dus automatisch naast elkaar gaan staan.
+  - nog een punt voeg een h2 toe bij elke section en maak deze onzichtbaar als het moet maar voor screenreaders is het nodig.
 - ...
 
 </details>

@@ -240,6 +240,12 @@ main > a::before{
     margin-right: 1em;
 }
 
+@media (prefers-reduced-motion){
+    main > section:first-of-type ul li{
+        transition: 0s;
+    }
+}
+
 @media (min-width:1080px) {
     section:nth-of-type(1) ul li {
         position: relative;
@@ -265,3 +271,18 @@ main > a::before{
         content: url("../images/bannerv2-1080.avif");
     }
 }
+
+@media (min-width: 1430px){
+    section:nth-of-type(1) ul li:nth-of-type(1) img{
+        content: url("../images/banner-1436.avif");
+    }
+    section:nth-of-type(1) ul li:nth-of-type(2) img{
+        content: url("../images/bannerv2-1436.avif");
+    }
+
+    section:nth-of-type(1) ul li div h3{
+        font-size: 2.3125em;
+    }
+    
+}
+

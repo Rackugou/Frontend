@@ -219,8 +219,6 @@ header a:not(:has(img)):hover{
 	text-decoration-thickness: 2px !important; 
 }
 
-
-
 /* nav responsiveness */
 @media (min-width: 870px){
 	header{
@@ -308,5 +306,34 @@ header a:not(:has(img)):hover{
 
 	footer > section nav{
 		width: 100%;
+	}
+}
+
+@media (min-width: 1430px){
+	header nav:last-of-type ul li{
+		display: flex;
+	}
+
+	header nav:last-of-type ul li:nth-of-type(1)::before{
+		content: "Winkelwagen";
+		align-content: center;
+		font-size: 0.8125em;
+	}
+
+	header nav:last-of-type ul li:nth-of-type(2)::before{
+		content: "Aanmelden";
+		align-content: center;
+		font-size: 0.8125em;
+	}
+
+	header > button:nth-of-type(2){
+		display: flex;
+		align-items: center;
+		margin-right: 4em;
+		gap: 1em; 
+	}
+
+	header > button:nth-of-type(2)::before{
+		content: "Zoeken";
 	}
 }
