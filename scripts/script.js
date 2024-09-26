@@ -12,7 +12,7 @@ let bal2 = document.querySelector("main section:nth-of-type(1) > img:nth-of-type
 
 menuButton.onclick = () => {
     menu.classList.toggle("toonMenu");
-    if (menuContent.src.includes("/images/menu.png")){
+    if (menuContent.src.includes("./images/menu.png")){
         menuContent.src = "./images/close_menu.png";
 }   else {
         menuContent.src = "./images/menu.png";
