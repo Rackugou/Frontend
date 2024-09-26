@@ -60,7 +60,7 @@ main > section:nth-of-type(2){
 main > section:nth-of-type(2) ul{
     list-style-type: none;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
     width: 100%;
 }
 
@@ -68,11 +68,10 @@ main > section:nth-of-type(2) ul li{
     display: flex;
     flex-direction: column;
     gap: 1em;
+    flex-shrink:0;
+    width: 100%;
 }
 
-main > section:nth-of-type(2) ul li:nth-of-type(1){
-
-}
 
 main > section:nth-of-type(2) ul li h3{
     font-size: 1.5em;
