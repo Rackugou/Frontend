@@ -1,7 +1,5 @@
-:root{
-    --color-accent-bg-green:#9BF00B;
-	--color-accent-bg-yellow:#ffb900;
-	--color-button:#0067B8;
+body{
+    background-color: var(--color-background-dark);
 }
 
 body, html {
@@ -56,10 +54,12 @@ main > section:first-of-type ul li div{
     padding: 1em;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-background);
 }
 
 main > section:first-of-type ul li p:first-of-type{
     margin: .3em 0 1.5em 0;
+    color: var(--color-text);
 }
 
 main > section:first-of-type ul li p:last-of-type{
@@ -87,6 +87,7 @@ main > section:first-of-type ul li img{
 main > section:first-of-type ul li h3{
     font-size: 1.5em;
     font-weight: 500;
+    color: var(--color-text);
 }
 
 .naarLinks{
@@ -132,6 +133,7 @@ main :is(section:nth-of-type(2), section:nth-of-type(3)) article{
     flex-direction: column;
     margin: 1em;
     gap: .5em;
+    background-color: var(--color-background);
 }
 
 main :is(section:nth-of-type(2), section:nth-of-type(3)) article div{
@@ -145,6 +147,11 @@ main :is(section:nth-of-type(2), section:nth-of-type(3)) article div h3{
     font-size: 1.3125em;
     font-weight: 550;
     flex-basis: 100%;
+    color: var(--color-text);
+}
+
+main :is(section:nth-of-type(2), section:nth-of-type(3)) article div p{
+    color: var(--color-text);
 }
 
 main :is(section:nth-of-type(2), section:nth-of-type(3)) article img{
@@ -197,6 +204,7 @@ main section:nth-of-type(3) h2{
     position: absolute;
     left: .75em;
     top: -1em;
+    color: var(--color-text);
 }
 
 main section:nth-of-type(3) article a:nth-of-type(2){
@@ -233,6 +241,7 @@ main > a{
     box-shadow: 0 .125em .25em 0 rgba(0, 0, 0, .13), 0 0 .0625em 0 rgba(0, 0, 0, .11);;
     text-decoration: none;
     color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 main > a::before{

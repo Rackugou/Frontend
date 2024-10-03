@@ -17,7 +17,37 @@
 	--color-background:#FFF;
 	--color-footer-background:#f2f2f2;
 	--color-menu-background:#e6e6e6;	
+
+	--color-windows-button: #001968;
+    --color-accent-windows: #005FCF;
+	--color-blue-gradient: #CFE1FF;
+	--color-orange-gradient: #FFEEDE;
+	/* --color-orange-gradient-end: rgba(255, 255, 255, 0.15); */
+
+	--color-accent-bg-green:#9BF00B;
+	--color-accent-bg-yellow:#ffb900;
+	--color-button:#0067B8;
+
+	--color-background-dark: #ffffff;
 }	
+
+@media (prefers-color-scheme: dark){
+	:root {
+		--color-background: #686868;
+		--color-background-dark: #333232;
+		--color-text: #fff;
+
+		--color-accent-bg-green:#588805;
+		--color-button:#2c9aee;
+
+		--color-footer-background: #1f1f1f;
+		--color-footer-text: #fff;
+
+		--color-blue-gradient: #76a6f8;
+		--color-orange-gradient: #fbb06a;
+		--color-orange-gradient-end: rgba(255, 255, 255, 0.15);
+	}
+}
 
 
 /****************/
@@ -54,11 +84,26 @@ header {
     display: flex;
 	align-items: center;
 	height: 3.3125em;
+	background-color: var(--color-background-dark);
 }
 
 /* logo */
-header > a {
+header > a:nth-of-type(1){
 	margin:0 auto;
+}
+
+header > a:nth-of-type(2){
+	position: absolute;
+	width: 100%;
+	padding: 1em;
+	left: -99999em;
+	color: var(--color-button);
+}
+
+header > a:nth-of-type(2):focus-visible{
+	left: 0;
+	top: 7em;
+	background-color: var(--color-footer-background);
 }
 
 header > a img:first-of-type{
@@ -108,6 +153,7 @@ header nav:first-of-type ul li a{
 	color: var(--color-menu-text);
 	display: block;
 	padding: 1em;
+	color: var(--color-text);
 }
 
 /* service menu */
@@ -225,7 +271,7 @@ header a:not(:has(img)):hover{
 		padding: 0 3em 0 3em;
 	}
 
-	header > a{
+	header > a:nth-of-type(1){
 		order: -50;
 		margin: 0 2em 0 0;
 	}
