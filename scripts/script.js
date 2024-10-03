@@ -13,9 +13,9 @@ let bal2 = document.querySelector("main section:nth-of-type(1) > img:nth-of-type
 menuButton.onclick = () => {
     menu.classList.toggle("toonMenu");
     if (menuContent.src.includes("images/menu.png")){
-        menuContent.src = "../images/close_menu.png";
+        menuContent.src = "./images/close_menu.png";
 }   else {
-        menuContent.src = "../images/menu.png";
+        menuContent.src = "./images/menu.png";
 }   
 };
 
@@ -25,15 +25,15 @@ buttonLinks.onclick = () => {
         
         
         if (card1.classList.contains("naarLinks")){
-                bal1.src = "../images/inactive_ball.png";
-                bal2.src = "../images/active_ball.png";
+                bal1.src = "./images/inactive_ball.png";
+                bal2.src = "./images/active_ball.png";
                 card2.removeAttribute("inert");
                 card1.setAttribute("inert", true);
         } else{
                 card1.removeAttribute("inert");
                 card2.setAttribute("inert", true);
-                bal1.src = "../images/active_ball.png";
-                bal2.src = "../images/inactive_ball.png";
+                bal1.src = "./images/active_ball.png";
+                bal2.src = "./images/inactive_ball.png";
         }
 };
 
@@ -42,14 +42,14 @@ buttonRechts.onclick = () => {
         card2.classList.toggle("naarLinks");
 
         if (card1.classList.contains("naarLinks")){
-                bal1.src = "../images/inactive_ball.png";
-                bal2.src = "../images/active_ball.png";
+                bal1.src = "./images/inactive_ball.png";
+                bal2.src = "./images/active_ball.png";
                 card2.removeAttribute("inert");
                 card1.setAttribute("inert", true);
         } else{
                 card1.removeAttribute("inert");
                 card2.setAttribute("inert", true);
-                bal1.src = "../images/active_ball.png";
-                bal2.src = "../images/inactive_ball.png";
+                bal1.src = "./images/active_ball.png";
+                bal2.src = "./images/inactive_ball.png";
         }
 };
